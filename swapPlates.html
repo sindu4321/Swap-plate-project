@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Junk Food to Healthy Food Swap</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      padding: 2rem;
+    }
+    h1 {
+      color: #2e7d32;
+    }
+    input, button {
+      padding: 10px;
+      font-size: 16px;
+      margin-right: 10px;
+    }
+    #result {
+      margin-top: 20px;
+      font-size: 18px;
+      color: #444;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🍔 Junk Food to Healthy Food Swap 🍎</h1>
+  <img
+    id="homeImage"
+    src="c:\Users\Abhigeil\Downloads\comparison-healthy-food-vs-unhealthy-junk-food_1639-52599.avif" heigth="350" width="500"
+    alt="Healthy vs Junk Food"
+  />
+  <p>Enter a junk food name to see a healthy alternative:</p>
+
+  <input type="text" id="junkInput" placeholder="e.g., Burger">
+  <button onclick="suggestHealthyFood()">Suggest Swap</button>
+
+  <div id="result"></div>
+
+  <script>
+    const foodSwaps = {
+  "burger": "Grilled veggie sandwich 🥪",
+  "pizza": "Whole wheat veggie pizza 🍕",
+  "fries": "Baked sweet potato fries 🍠",
+  "ice cream": "Frozen yogurt with fruits 🍧",
+  "soda": "Fresh fruit juice or lemon water 🍋",
+  "chips": "Air-popped popcorn 🍿",
+  "chocolate": "Dark chocolate or fruit bites 🍫",
+  "donut": "Oats & banana muffins 🧁",
+  "candy": "Dried fruits or mixed nuts 🍬",
+  "noodles": "Whole wheat noodles with vegetables 🍜",
+  "white bread": "Whole grain or multigrain bread 🍞",
+  "fried chicken": "Oven-baked or grilled chicken 🍗",
+  "biscuits": "Whole grain crackers with nut butter 🧈",
+  "milkshake": "Banana/mango smoothie with low-fat milk 🥭",
+  "energy drink": "Coconut water or buttermilk 🥥",
+  "instant ramen": "Homemade vegetable soup with noodles 🍲",
+  "cake": "Fruit-based or oats muffins 🎂",
+  "cheese puffs": "Roasted chickpeas or spiced nuts 🌰",
+  "cookies": "Homemade oats cookies 🍪",
+  "cereal": "Oats with fruits and nuts 🍓",
+  "white rice": "Brown rice or quinoa 🍚",
+  "ice pops": "Homemade fruit popsicles 🍡",
+  "mayonnaise": "Avocado or hummus spread 🥑",
+  "ketchup": "Homemade tomato salsa 🍅",
+  "hotdog": "Grilled tofu or lentil patties 🌿",
+  "french fries": "Baked sweet potato wedges 🍠",
+    "soda": "Sparkling water with lemon 🍋",
+    "instant noodles": "Rice noodles with veggie broth 🍜",
+    "milk chocolate": "70%+ dark chocolate or cacao nibs 🍫",
+    "samosa": "Steamed vegetable momos or baked samosas 🥟",
+    "white pasta": "Whole wheat or lentil pasta 🍝",
+    "pakora": "Air-fried or baked pakoras 🌽",
+    "pastry": "Greek yogurt with honey and nuts 🍯",
+    "sweet lassi": "Plain lassi or spiced buttermilk 🥛",
+    "processed cheese": "Low-fat paneer or almond cheese 🧀",
+    "fried maggi": "Vegetable upma or poha 🍛",
+    "nutella": "Peanut or almond butter (no sugar) 🥜",
+    "potato chips": "Roasted lotus seeds (makhana) 🌰",
+    "instant coffee": "Brewed black coffee or green tea ☕",
+    "ice cream cone": "Banana nice cream 🍦",
+    "white sugar": "Jaggery or honey 🍯",
+    "fried rice": "Stir-fried brown rice with veggies 🥦",
+    "bread roll": "Whole grain roti or chapati 🫓",
+    "energy bar": "Homemade oats and dates bar 🌾",
+    "cornflakes": "Muesli or oats with fruits 🍓"
+
+    };
+
+    function suggestHealthyFood() {
+      const input = document.getElementById("junkInput").value.trim().toLowerCase();
+      const result = document.getElementById("result");
+
+      if (foodSwaps[input]) {
+        result.innerHTML = `<strong>Healthy Alternative:</strong> ${foodSwaps[input]}`;
+      } else {
+        result.innerHTML = "Sorry! No swap found for that item. Try another junk food name.";
+      }
+    }
+  </script>
+
+</body>
+</html>
